@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* header {
+    background-color: #007209   ;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Fira Sans, sans-serif; 
+} */
+
+/* Estilo para o cabeçalho fixo */
+/* Estilos para o header */
+.header {
+    background-color: #333; /* Cor de fundo do header */
+    color: #fff; /* Cor do texto no header */
+    padding: 20px 0; /* Espaçamento interno do header */
+    text-align: center;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para o logotipo */
+.logo img {
+    width: 70px; /* Largura da imagem do logotipo */
+    height: auto;
+}
+
+/* Estilos para o menu de navegação */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff; /* Cor dos links no menu */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #04be04; /* Cor dos links no menu ao passar o mouse */
+}
+
+/* Estilo para o fundo com efeito de fade */
+#background-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o fundo atrás de todo o conteúdo */
+    background-image: url(../fundo.png);
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a tela */
+    opacity: 0.5; /* Define a opacidade do fundo (0.7 para um efeito de fade) */
+    filter: blur(2px); 
+
+    
+}
+
+/* Estilos para a seção "Sobre" */
+#sobre {
+    padding: 60px;
+    text-align: center;
+}
+
+#sobre h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+
+/* SLIDE */
+
