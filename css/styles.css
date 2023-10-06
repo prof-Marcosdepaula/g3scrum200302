@@ -9,30 +9,34 @@
     box-sizing: border-box;
 }
 
-/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira Sans', sans-serif; /* Importe a fonte do Google Fonts */
     line-height: 1.6;
+    position: relative;
+    background-image: url('./img/fundo.png'); /* Substitua pelo caminho correto para a sua imagem */
+    background-size: cover;
 }
 
-/* header {
-    background-color: #007209   ;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-family: Fira Sans, sans-serif; 
-} */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.185); /* Cor do fundo com opacidade */
+    z-index: -1;
+    filter: blur(10px); /* Efeito de desfoque (ajuste o valor conforme necessário) */
+}
 
-/* Estilo para o cabeçalho fixo */
-/* Estilos para o header */
 .header {
     background-color: #333; /* Cor de fundo do header */
-    color: #fff; /* Cor do texto no header */
-    padding: 20px 0; /* Espaçamento interno do header */
+    color:  #fff; /* Cor do texto no header */
+    padding: 10px 150px; /* Espaçamento interno do header */
     text-align: center;
 }
 
-/* Estilos para a barra de navegação */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -42,13 +46,11 @@ body {
     padding: 0 20px;
 }
 
-/* Estilos para o logotipo */
 .logo img {
-    width: 70px; /* Largura da imagem do logotipo */
+    width: 70px;
     height: auto;
 }
 
-/* Estilos para o menu de navegação */
 .menu {
     list-style: none;
     margin: 0;
@@ -66,32 +68,15 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #fff; /* Cor dos links no menu */
+    color: #fff; 
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #04be04; /* Cor dos links no menu ao passar o mouse */
+    color: #007bff;
 }
 
-/* Estilo para o fundo com efeito de fade */
-#background-fade {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Coloca o fundo atrás de todo o conteúdo */
-    background-image: url(../fundo.png);
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a tela */
-    opacity: 0.5; /* Define a opacidade do fundo (0.7 para um efeito de fade) */
-    filter: blur(2px); 
-
-    
-}
-
-/* Estilos para a seção "Sobre" */
 #sobre {
     padding: 60px;
     text-align: center;
@@ -110,5 +95,171 @@ body {
 
 
 
-/* SLIDE */
 
+
+.customcard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.custom-card {
+    width: 350px;
+    height: auto;
+    position: relative;
+    transition: transform 0.5s, box-shadow 0.3s;
+
+}
+
+.custom-card:hover {
+    transform: translateY(-10px); /* Aumente o valor para um efeito mais suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.custom-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+
+.custom-card:hover .custom-card-overlay {
+    opacity: 1;
+}
+
+.custom-card-description {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.custom-card-title {
+    font-family:Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-weight:bold;
+    font-size: 21px;
+}
+
+.custom-card-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-card-button:hover {
+    background-color: #0056b3;
+}
+
+.section-title {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #ffffff; /* Cor do texto do título */
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px; /* Espaçamento inferior para separar o título dos cards */
+    text-align: center; /* Centralizar o título */
+    background-color: #333;
+    line-height: 1.6;
+}
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.chale {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.chale:hover {
+    transform: scale(1.05);
+}
+.chale img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+}
+.chale-details {
+    flex: 1;
+}
+.chale h2 {
+    font-size: 24px;
+    margin: 0;
+}
+.chale p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.reserve-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.reserve-button:hover {
+    background-color: #007bff;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilize os links do footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Estilize os links do footer quando estiverem em hover */
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
