@@ -176,11 +176,11 @@ body::before {
 }
 
 .section-title {
-    font-size: 24px; /* Tamanho da fonte do título */
-    color: #ffffff; /* Cor do texto do título */
+    font-size: 24px;
+    color: #ffffff;
     font-family: Arial, sans-serif;
-    margin-bottom: 10px; /* Espaçamento inferior para separar o título dos cards */
-    text-align: center; /* Centralizar o título */
+    margin-bottom: 10px; 
+    text-align: center; 
     background-color: #333;
     line-height: 1.6;
 }
@@ -251,15 +251,23 @@ footer p {
     margin: 0;
 }
 
-/* Estilize os links do footer */
+
 footer a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
 }
 
-/* Estilize os links do footer quando estiverem em hover */
+
 footer a:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+
+
+.rounded-iframe {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%; 
+    overflow: hidden;
 }
